@@ -6,7 +6,6 @@ This guide provides step-by-step instructions for using Unleash and Unleash Edge
 
 * Docker Desktop (or Docker CE)
 * Java
-* Maven
 
 ## Part 1: Using Unleash Directly
 
@@ -27,7 +26,7 @@ This guide provides step-by-step instructions for using Unleash and Unleash Edge
 4.  **Run the Java application:**
     *   Compile and run the `Main.java` application.
     ```bash
-    mvn compile exec:java -Dexec.mainClass="Main"
+    ./mvnw compile exec:java -Dexec.mainClass="Main"
     ```
     You should see output indicating that the feature flag is not enabled.
 5. **Change the feature flag value:**
@@ -66,7 +65,7 @@ This guide provides step-by-step instructions for using Unleash and Unleash Edge
 4.  **Run the Java application again:**
     *   Compile and run the `Main.java` application as before:
     ```bash
-    mvn compile exec:java -Dexec.mainClass="Main"
+    ./mvnw compile exec:java -Dexec.mainClass="Main"
     ```
     You should see the feature flag is still enabled.
 
@@ -77,6 +76,6 @@ This guide provides step-by-step instructions for using Unleash and Unleash Edge
 6.  **Observe the change in the application:**
     *   Run the Java application again.
     ```bash
-    mvn compile exec:java -Dexec.mainClass="Main"
+    ./mvnw compile exec:java -Dexec.mainClass="Main"
     ```
     This time, you should see that the feature flag is disabled, demonstrating that the application is now getting its flag configuration from Unleash Edge.
