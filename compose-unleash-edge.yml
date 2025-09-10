@@ -1,0 +1,12 @@
+services:
+  unleash-edge:
+    image: unleashorg/unleash-edge:v19.15
+    command: edge
+    ports:
+      - "3063:3063"
+    environment:
+      - STRICT=true
+      - UPSTREAM_URL=http://unleash:4242
+      - TOKENS=default:development.unleash-insecure-api-token
+    depends_on:
+      - unleash
